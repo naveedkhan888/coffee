@@ -4,10 +4,10 @@
  *
  * @link http://tgmpluginactivation.com/configuration/
  *
- * @package Coffeee
+ * @package Restimo
  */
 require_once get_template_directory() . '/inc/libs/class-tgm-plugin-activation.php';
-function coffeee_register_required_plugins() {
+function restimo_register_required_plugins() {
 	$protocol = is_ssl() ? 'https' : 'http';
 	$plugins = array(
 		array(
@@ -48,15 +48,15 @@ function coffeee_register_required_plugins() {
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
         ),
         array(            
-            'name'               => esc_html__( 'Coffeee Icons', 'coffeee' ), // The plugin name.
+            'name'               => esc_html__( 'Restimo Icons', 'coffeee' ), // The plugin name.
             'slug'               => 'icon-plugin', // The plugin slug (typically the folder name).
             'source'             => esc_url($protocol.'://dpsample.com/icon-plugin.zip'), // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
         ),
         array(            
-            'name'               => esc_html__( 'Core Code Coffeee', 'coffeee' ), // The plugin name.
-            'slug'               => 'core-code-coffeee', // The plugin slug (typically the folder name).
-            'source'             => esc_url($protocol.'://dpsample.com/core-code-coffeee.zip'), // The plugin source.
+            'name'               => esc_html__( 'Core Code Restimo', 'coffeee' ), // The plugin name.
+            'slug'               => 'core-code-restimo', // The plugin slug (typically the folder name).
+            'source'             => esc_url($protocol.'://dpsample.com/core-code-restimo.zip'), // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
         ),
         array(            
@@ -104,4 +104,4 @@ function coffeee_register_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 
-add_action( 'tgmpa_register', 'coffeee_register_required_plugins' );
+add_action( 'tgmpa_register', 'restimo_register_required_plugins' );
