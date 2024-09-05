@@ -887,6 +887,10 @@ td {
 }
 .border_clr.elementor-widget-divider {
   --divider-color: #ecb65c; }
+.border_clr.elementor-widget-divider.elementor-view-framed .elementor-icon, 
+.border_clr.elementor-widget-divider.elementor-view-default .elementor-icon {
+  color: #ecb65c;
+}
 .elementor-social-icons-wrapper a.elementor-social-icon {
   background: #ecb65c;
 }
