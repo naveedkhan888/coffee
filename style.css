@@ -891,7 +891,9 @@ td {
 .border_clr.elementor-widget-divider.elementor-view-default .elementor-icon {
   color: #ecb65c;
 }
-.tab-titles .title-item a.tab-active, .tab-titles .title-item a:hover, .slide-rev-subtitle {
+div.tab-titles div.title-item.font-second a.tab-active, 
+div.tab-titles div.title-item.font-second a:hover, 
+.slide-rev-subtitle {
   background: #ecb65c;
 }
 .elementor-social-icons-wrapper a.elementor-social-icon {
