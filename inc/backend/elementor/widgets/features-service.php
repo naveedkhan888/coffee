@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Button
  */
-class Restimo_Features_Service extends Widget_Base{
+class Coffeee_Features_Service extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_Features_Service extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Features Service', 'restimo' );
+		return __( 'XP Features Service', 'coffeee' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restimo_Features_Service extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo' ];
+		return [ 'category_coffeee' ];
 	}
 
 	/**
@@ -45,7 +45,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->start_controls_section(
 			'fservice_section',
 			[
-				'label' => __( 'Button', 'restimo' ),
+				'label' => __( 'Button', 'coffeee' ),
 			]
         );
 
@@ -54,7 +54,7 @@ class Restimo_Features_Service extends Widget_Base{
         $repeater->add_control(
 			'fservice_image',
 			[
-				'label' => __( 'Image', 'restimo' ),
+				'label' => __( 'Image', 'coffeee' ),
 				'type' => Controls_Manager::MEDIA,
 			]
 		);
@@ -62,56 +62,56 @@ class Restimo_Features_Service extends Widget_Base{
         $repeater->add_control(
 			'fservice_number',
 			[
-				'label' => __( 'Number:', 'restimo' ),
+				'label' => __( 'Number:', 'coffeee' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '01', 'restimo' ),
+				'default' => __( '01', 'coffeee' ),
 			]
 		);
 
         $repeater->add_control(
 			'fservice_title',
 			[
-				'label' => __( 'Title & Content', 'restimo' ),
+				'label' => __( 'Title & Content', 'coffeee' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Service Title', 'restimo' ),
-				'placeholder' => __( 'Service Title', 'restimo' ),
+				'default' => __( 'Service Title', 'coffeee' ),
+				'placeholder' => __( 'Service Title', 'coffeee' ),
 				'label_block' => true,
 			]
 		);
 		$repeater->add_control(
 			'fservice_content',
 			[
-				'label' => __( 'Description', 'restimo' ),
+				'label' => __( 'Description', 'coffeee' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => esc_html__( 'Accelerate your innovation and transformation with a fully integrated suite of capabilities that puts digital at the heart of everything you do.', 'restimo' ),
+				'default' => esc_html__( 'Accelerate your innovation and transformation with a fully integrated suite of capabilities that puts digital at the heart of everything you do.', 'coffeee' ),
 			]
 		);
 		$repeater->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'restimo' ),
+				'label' => __( 'Link', 'coffeee' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'restimo' ),
+				'placeholder' => __( 'https://your-link.com', 'coffeee' ),
 			]
 		);
 
 		$this->add_control(
 			'fservice_lists',
 			[
-				'label' => __( 'Features Service List Items', 'restimo' ),
+				'label' => __( 'Features Service List Items', 'coffeee' ),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'fservice_number' => __( '01', 'restimo' ),
-						'fservice_title' => __( 'Title #1', 'restimo' ),
-						'fservice_content' => __( 'Accelerate your innovation and transformation with a fully integrated suite of capabilities that puts digital at the heart of everything you do.', 'restimo' ),
+						'fservice_number' => __( '01', 'coffeee' ),
+						'fservice_title' => __( 'Title #1', 'coffeee' ),
+						'fservice_content' => __( 'Accelerate your innovation and transformation with a fully integrated suite of capabilities that puts digital at the heart of everything you do.', 'coffeee' ),
 						'link' => '#',
 					],
 					[
-						'fservice_number' => __( '02', 'restimo' ),
-						'fservice_title' => __( 'Title #2', 'restimo' ),
-						'fservice_content' => __( 'Accelerate your innovation and transformation with a fully integrated suite of capabilities that puts digital at the heart of everything you do.', 'restimo' ),
+						'fservice_number' => __( '02', 'coffeee' ),
+						'fservice_title' => __( 'Title #2', 'coffeee' ),
+						'fservice_content' => __( 'Accelerate your innovation and transformation with a fully integrated suite of capabilities that puts digital at the heart of everything you do.', 'coffeee' ),
 						'link' => '#',
 					],
 				],
@@ -122,16 +122,16 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->add_control(
 			'btn_text',
 			[
-				'label' => __( 'Label Button', 'restimo' ),
+				'label' => __( 'Label Button', 'coffeee' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Read More', 'restimo' ),
+				'default' => __( 'Read More', 'coffeee' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'fservice_height',
 			[
-				'label' => __( 'Height', 'restimo' ),
+				'label' => __( 'Height', 'coffeee' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -156,14 +156,14 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->start_controls_section(
 			'style_fservice_section',
 			[
-				'label' => __( 'General', 'restimo' ),
+				'label' => __( 'General', 'coffeee' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'fservice_list_padding',
 			[
-				'label' => __( 'Padding Box', 'restimo' ),
+				'label' => __( 'Padding Box', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -182,14 +182,14 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->start_controls_tab(
 			'fservice_style_normal',
 			[
-				'label' => __( 'Normal', 'restimo' ),
+				'label' => __( 'Normal', 'coffeee' ),
 			]
 		);
 
 		$this->add_control(
 			'fservice_number_color',
 			[
-				'label' => __( 'Number', 'restimo' ),
+				'label' => __( 'Number', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -200,7 +200,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->add_control(
 			'fservice_title_color',
 			[
-				'label' => __( 'Title', 'restimo' ),
+				'label' => __( 'Title', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -211,7 +211,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->add_control(
 			'fservice_desc_color',
 			[
-				'label' => __( 'Description', 'restimo' ),
+				'label' => __( 'Description', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -224,13 +224,13 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->start_controls_tab(
 			'fservice_style_hover',
 			[
-				'label' => __( 'Hover', 'restimo' ),
+				'label' => __( 'Hover', 'coffeee' ),
 			]
 		);
 		$this->add_control(
 			'fservice_number_hcolor',
 			[
-				'label' => __( 'Number', 'restimo' ),
+				'label' => __( 'Number', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -241,7 +241,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->add_control(
 			'fservice_title_hcolor',
 			[
-				'label' => __( 'Title', 'restimo' ),
+				'label' => __( 'Title', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -252,7 +252,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->add_control(
 			'fservice_desc_hcolor',
 			[
-				'label' => __( 'Description', 'restimo' ),
+				'label' => __( 'Description', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -263,7 +263,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->add_control(
 			'fservice_overlay_color',
 			[
-				'label' => __( 'Overlay', 'restimo' ),
+				'label' => __( 'Overlay', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -280,7 +280,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'restimo' ),
+				'label' => __( 'Content', 'coffeee' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -289,7 +289,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->add_control(
 			'heading_number',
 			[
-				'label' => __( 'Number', 'restimo' ),
+				'label' => __( 'Number', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -297,7 +297,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->add_responsive_control(
 			'number_space',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'coffeee' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -322,7 +322,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restimo' ),
+				'label' => __( 'Title', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -339,7 +339,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->add_control(
 			'heading_desc',
 			[
-				'label' => __( 'Description', 'restimo' ),
+				'label' => __( 'Description', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -357,7 +357,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->start_controls_section(
 			'style_section_btn',
 			[
-				'label' => __( 'Button', 'restimo' ),
+				'label' => __( 'Button', 'coffeee' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -368,14 +368,14 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'restimo' ),
+				'label' => __( 'Normal', 'coffeee' ),
 			]
 		);
 
 		$this->add_control(
 			'button_icon_color',
 			[
-				'label' => __( 'Icon Color', 'restimo' ),
+				'label' => __( 'Icon Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -387,7 +387,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->add_control(
 			'background_color',
 			[
-				'label' => __( 'Background Color', 'restimo' ),
+				'label' => __( 'Background Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .features-service-wrapper .btn-details' => 'background: {{VALUE}};',
@@ -397,7 +397,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->add_control(
 			'border_color',
 			[
-				'label' => __( 'Border Color', 'restimo' ),
+				'label' => __( 'Border Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .features-service-wrapper .btn-details' => 'border-color: {{VALUE}};',
@@ -412,14 +412,14 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'restimo' ),
+				'label' => __( 'Hover', 'coffeee' ),
 			]
 		);
 
 		$this->add_control(
 			'btn_icon_hcolor',
 			[
-				'label' => __( 'Icon', 'restimo' ),
+				'label' => __( 'Icon', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .features-service-wrapper .btn-details:hover i' => 'color: {{VALUE}};',
@@ -429,7 +429,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->add_control(
 			'btn_text_hcolor',
 			[
-				'label' => __( 'Text Color', 'restimo' ),
+				'label' => __( 'Text Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .features-service-wrapper .btn-details:hover .btn-text' => 'color: {{VALUE}};',
@@ -440,7 +440,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->add_control(
 			'btn_bg_hcolor',
 			[
-				'label' => __( 'Background Color', 'restimo' ),
+				'label' => __( 'Background Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .features-service-wrapper .btn-details:hover' => 'background-color: {{VALUE}};',
@@ -450,7 +450,7 @@ class Restimo_Features_Service extends Widget_Base{
 		$this->add_control(
 			'btn_border_hcolor',
 			[
-				'label' => __( 'Border Color', 'restimo' ),
+				'label' => __( 'Border Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .features-service-wrapper .btn-details:hover' => 'border-color: {{VALUE}};',
@@ -520,5 +520,5 @@ class Restimo_Features_Service extends Widget_Base{
 	}
 
 }
-// After the Restimo_Features_Service class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_Features_Service() );
+// After the Coffeee_Features_Service class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Coffeee_Features_Service() );

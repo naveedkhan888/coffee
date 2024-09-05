@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Button
  */
-class Restimo_Button extends Widget_Base{
+class Coffeee_Button extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_Button extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Button', 'restimo' );
+		return __( 'XP Button', 'coffeee' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restimo_Button extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo' ];
+		return [ 'category_coffeee' ];
 	}
 
 	/**
@@ -41,9 +41,9 @@ class Restimo_Button extends Widget_Base{
 
 	public static function get_button_color() {
 		return [
-			'main' 	=> __( 'Main Color', 'restimo' ),
-			'dark' 	=> __( 'Dark Color', 'restimo' ),
-			'light' => __( 'Light Color', 'restimo' ),
+			'main' 	=> __( 'Main Color', 'coffeee' ),
+			'dark' 	=> __( 'Dark Color', 'coffeee' ),
+			'light' => __( 'Light Color', 'coffeee' ),
 		];
 	}
 
@@ -53,26 +53,26 @@ class Restimo_Button extends Widget_Base{
 		$this->start_controls_section(
 			'button_section',
 			[
-				'label' => __( 'Button', 'restimo' ),
+				'label' => __( 'Button', 'coffeee' ),
 			]
         );
         
         $this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'restimo' ),
+				'label' => __( 'Alignment', 'coffeee' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restimo' ),
+						'title' => __( 'Left', 'coffeee' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restimo' ),
+						'title' => __( 'Center', 'coffeee' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restimo' ),
+						'title' => __( 'Right', 'coffeee' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -84,7 +84,7 @@ class Restimo_Button extends Widget_Base{
 		$this->add_control(
 			'btn_style',
 			[
-				'label' => __( 'Style Color', 'restimo' ),
+				'label' => __( 'Style Color', 'coffeee' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'main',
 				'options' => self::get_button_color(),
@@ -95,18 +95,18 @@ class Restimo_Button extends Widget_Base{
 		$this->add_control(
 			'text',
 			[
-				'label' => __( 'Label', 'restimo' ),
+				'label' => __( 'Label', 'coffeee' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Click here', 'restimo' ),
+				'default' => __( 'Click here', 'coffeee' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'restimo' ),
+				'label' => __( 'Link', 'coffeee' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'restimo' ),
+				'placeholder' => __( 'https://your-link.com', 'coffeee' ),
 				'default' => [
 					'url' => '#',
 				],
@@ -119,7 +119,7 @@ class Restimo_Button extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'General', 'restimo' ),
+				'label' => __( 'General', 'coffeee' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -138,7 +138,7 @@ class Restimo_Button extends Widget_Base{
 		$this->add_control(
 			'button_radius',
 			[
-				'label' => __( 'Border Radius', 'restimo' ),
+				'label' => __( 'Border Radius', 'coffeee' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -160,14 +160,14 @@ class Restimo_Button extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'restimo' ),
+				'label' => __( 'Normal', 'coffeee' ),
 			]
 		);
 
 		$this->add_control(
 			'button_text_color',
 			[
-				'label' => __( 'Text Color', 'restimo' ),
+				'label' => __( 'Text Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -179,7 +179,7 @@ class Restimo_Button extends Widget_Base{
 		$this->add_control(
 			'btn_bg',
 			[
-				'label' => __( 'Background Color', 'restimo' ),
+				'label' => __( 'Background Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .xptf-btn' => 'background-color: {{VALUE}};',
@@ -200,14 +200,14 @@ class Restimo_Button extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'restimo' ),
+				'label' => __( 'Hover', 'coffeee' ),
 			]
 		);
 
 		$this->add_control(
 			'hover_color',
 			[
-				'label' => __( 'Text Color', 'restimo' ),
+				'label' => __( 'Text Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'color: {{VALUE}};',
@@ -218,7 +218,7 @@ class Restimo_Button extends Widget_Base{
 		$this->add_control(
 			'button_background_hover_color',
 			[
-				'label' => __( 'Background Color', 'restimo' ),
+				'label' => __( 'Background Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'background-color: {{VALUE}};',
@@ -228,7 +228,7 @@ class Restimo_Button extends Widget_Base{
         $this->add_control(
 			'border_hover_color',
 			[
-				'label' => __( 'Border Color', 'restimo' ),
+				'label' => __( 'Border Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'border-color: {{VALUE}};',
@@ -239,7 +239,7 @@ class Restimo_Button extends Widget_Base{
 		$this->add_control(
 			'hover_animation',
 			[
-				'label' => __( 'Hover Animation', 'restimo' ),
+				'label' => __( 'Hover Animation', 'coffeee' ),
 				'type' => Controls_Manager::HOVER_ANIMATION,
 			]
 		);
@@ -287,4 +287,4 @@ class Restimo_Button extends Widget_Base{
 
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_Button() );
+Plugin::instance()->widgets_manager->register( new Coffeee_Button() );

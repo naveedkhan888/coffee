@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Heading 
  */
-class Restimo_Heading extends Widget_Base{
+class Coffeee_Heading extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_Heading extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Heading', 'restimo' );
+		return __( 'XP Heading', 'coffeee' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,14 +24,14 @@ class Restimo_Heading extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo' ];
+		return [ 'category_coffeee' ];
 	}
 
 	public static function get_subtitle_style() {
 		return [
-			'' 				=> __( 'Default', 'restimo' ),
-			'is_highlight' 	=> __( 'Highlight', 'restimo' ),
-			'is_line' 		=> __( 'Line', 'restimo' ),
+			'' 				=> __( 'Default', 'coffeee' ),
+			'is_highlight' 	=> __( 'Highlight', 'coffeee' ),
+			'is_line' 		=> __( 'Line', 'coffeee' ),
 		];
 	}
 
@@ -41,20 +41,20 @@ class Restimo_Heading extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Content', 'restimo' ),
+				'label' => __( 'Content', 'coffeee' ),
 			]
 		);
 
 		$this->add_control(
 			'sub',
 			[
-				'label' => __( 'Subtitle', 'restimo' ),
+				'label' => __( 'Subtitle', 'coffeee' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => __( 'our services', 'restimo' ),
-				'placeholder' => __( 'Enter your subtitle', 'restimo' ),
+				'default' => __( 'our services', 'coffeee' ),
+				'placeholder' => __( 'Enter your subtitle', 'coffeee' ),
 				'label_block' => true,
 			]
 		);
@@ -62,20 +62,20 @@ class Restimo_Heading extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'restimo' ),
+				'label' => __( 'Title', 'coffeee' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => __( 'What we do', 'restimo' ),
-				'placeholder' => __( 'Enter your title', 'restimo' ),
+				'default' => __( 'What we do', 'coffeee' ),
+				'placeholder' => __( 'Enter your title', 'coffeee' ),
 				'label_block' => true,
 			]
 		);
 		$this->add_control(
 			'header_size',
 			[
-				'label' => __( 'Title HTML Tag', 'restimo' ),
+				'label' => __( 'Title HTML Tag', 'coffeee' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h1' => 'H1',
@@ -94,23 +94,23 @@ class Restimo_Heading extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'restimo' ),
+				'label' => __( 'Alignment', 'coffeee' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restimo' ),
+						'title' => __( 'Left', 'coffeee' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restimo' ),
+						'title' => __( 'Center', 'coffeee' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restimo' ),
+						'title' => __( 'Right', 'coffeee' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				// 'prefix_class' => 'restimo%s-align-',
+				// 'prefix_class' => 'coffeee%s-align-',
 				'selectors' => [
 					'{{WRAPPER}}' => 'text-align: {{VALUE}};',
 				],
@@ -124,7 +124,7 @@ class Restimo_Heading extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Heading', 'restimo' ),
+				'label' => __( 'Heading', 'coffeee' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -133,7 +133,7 @@ class Restimo_Heading extends Widget_Base{
 		$this->add_control(
 			'heading_stitle',
 			[
-				'label' => __( 'Subtitle', 'restimo' ),
+				'label' => __( 'Subtitle', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -142,7 +142,7 @@ class Restimo_Heading extends Widget_Base{
 		$this->add_control(
 			'subtitle_style',
 			[
-				'label' => __( 'Subtitle Style', 'restimo' ),
+				'label' => __( 'Subtitle Style', 'coffeee' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => self::get_subtitle_style(),
@@ -151,7 +151,7 @@ class Restimo_Heading extends Widget_Base{
 		$this->add_responsive_control(
 			'line_width',
 			[
-				'label' => __( 'Width', 'restimo' ),
+				'label' => __( 'Width', 'coffeee' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -176,7 +176,7 @@ class Restimo_Heading extends Widget_Base{
 		$this->add_control(
 			'stitle_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -188,7 +188,7 @@ class Restimo_Heading extends Widget_Base{
 		$this->add_control(
 			'stitle_bg',
 			[
-				'label' => __( 'Background color', 'restimo' ),
+				'label' => __( 'Background color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -202,7 +202,7 @@ class Restimo_Heading extends Widget_Base{
 		$this->add_control(
 			'stitle_border',
 			[
-				'label' => __( 'Border Color', 'restimo' ),
+				'label' => __( 'Border Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -223,7 +223,7 @@ class Restimo_Heading extends Widget_Base{
 		$this->add_responsive_control(
 			'stitle_bottom_space',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'coffeee' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -241,7 +241,7 @@ class Restimo_Heading extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restimo' ),
+				'label' => __( 'Title', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -249,7 +249,7 @@ class Restimo_Heading extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -288,4 +288,4 @@ class Restimo_Heading extends Widget_Base{
 	}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_Heading() );
+Plugin::instance()->widgets_manager->register( new Coffeee_Heading() );

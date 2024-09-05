@@ -37,7 +37,7 @@ class XP_Element_Column extends Module {
 		$element->add_responsive_control(
 			'_xp_column_min_width',
 			[
-				'label'        => esc_html__( 'Min Width (px)', 'restimo' ),
+				'label'        => esc_html__( 'Min Width (px)', 'coffeee' ),
 				'type'      => Controls_Manager::SLIDER,
 				'default'   => [
 					'unit' => 'px',
@@ -72,15 +72,15 @@ class XP_Element_Column extends Module {
 		$element->add_control(
 			'_xp_content_align',
 			[
-				'label'        => esc_html__( 'Content Align', 'restimo' ),
+				'label'        => esc_html__( 'Content Align', 'coffeee' ),
 				'type'         => Controls_Manager::CHOOSE,
 				'options'      => [
 					'vertical'   => [
-						'title' => esc_html__( 'Vertical', 'restimo' ),
+						'title' => esc_html__( 'Vertical', 'coffeee' ),
 						'icon'  => 'fa fa-ellipsis-v',
 					],
 					'horizontal' => [
-						'title' => esc_html__( 'Horizontal', 'restimo' ),
+						'title' => esc_html__( 'Horizontal', 'coffeee' ),
 						'icon'  => 'fa fa-ellipsis-h',
 					],
 				],

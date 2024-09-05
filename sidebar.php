@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Restimo
+ * @package Coffeee
  */
 
-if ( restimo_get_layout() === 'full-content' ) {
+if ( coffeee_get_layout() === 'full-content' ) {
 	return;
 }
 

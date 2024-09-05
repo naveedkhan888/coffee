@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Projects Carousel
  */
-class Restimo_Portfolio_Slider extends Widget_Base{
+class Coffeee_Portfolio_Slider extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Portfolio Carousel', 'restimo' );
+		return __( 'XP Portfolio Carousel', 'coffeee' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo' ];
+		return [ 'category_coffeee' ];
 	}
 
 	protected function register_controls() {
@@ -33,24 +33,24 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Projects', 'restimo' ),
+				'label' => __( 'Projects', 'coffeee' ),
 			]
 		);
 		$this->add_control(
 			'project_cat',
 			[
-				'label' => __( 'Select Categories', 'restimo' ),
+				'label' => __( 'Select Categories', 'coffeee' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->select_param_cate_project(),
 				'multiple' => true,
 				'label_block' => true,
-				'placeholder' => __( 'All Categories', 'restimo' ),
+				'placeholder' => __( 'All Categories', 'coffeee' ),
 			]
 		);
 		$this->add_control(
 			'project_num',
 			[
-				'label' => __( 'Show Number Projects', 'restimo' ),
+				'label' => __( 'Show Number Projects', 'coffeee' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '5',
 			]
@@ -58,7 +58,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'heading_slider',
 			[
-				'label' => __( 'Slider', 'restimo' ),
+				'label' => __( 'Slider', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -70,10 +70,10 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides to Show', 'restimo' ),
+				'label' => __( 'Slides to Show', 'coffeee' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'restimo' ),
+					'' => __( 'Default', 'coffeee' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -81,43 +81,43 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'center_mode',
 			[
-				'label' => __( 'Center Mode', 'restimo' ),
+				'label' => __( 'Center Mode', 'coffeee' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'restimo' ),
-					'false' => __( 'No', 'restimo' ),
+					'true' => __( 'Yes', 'coffeee' ),
+					'false' => __( 'No', 'coffeee' ),
 				]
 			]
 		);
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'restimo' ),
+				'label' => __( 'Loop', 'coffeee' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'restimo' ),
-					'false' => __( 'No', 'restimo' ),
+					'true' => __( 'Yes', 'coffeee' ),
+					'false' => __( 'No', 'coffeee' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'restimo' ),
+				'label' => __( 'Autoplay', 'coffeee' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'restimo' ),
-					'false' => __( 'No', 'restimo' ),
+					'true' => __( 'Yes', 'coffeee' ),
+					'false' => __( 'No', 'coffeee' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'restimo' ),
+				'label' => __( 'Autoplay Timeout', 'coffeee' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -137,31 +137,31 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'restimo' ),
+				'label' => __( 'Arrows', 'coffeee' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'restimo' ),
-					'false'  => __( 'No', 'restimo' ),
+					'true'   => __( 'Yes', 'coffeee' ),
+					'false'  => __( 'No', 'coffeee' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'restimo' ),
+				'label' => __( 'Dots', 'coffeee' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'restimo' ),
-					'false'  => __( 'No', 'restimo' ),
+					'true'   => __( 'Yes', 'coffeee' ),
+					'false'  => __( 'No', 'coffeee' ),
 				],
 			]
 		);
 		$this->add_responsive_control(
 			'w_gaps',
 			[
-				'label' => __( 'Gap Width', 'restimo' ),
+				'label' => __( 'Gap Width', 'coffeee' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -176,14 +176,14 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'overlay_style_section',
 			[
-				'label' => __( 'Project Items', 'restimo' ),
+				'label' => __( 'Project Items', 'coffeee' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'heading_general',
 			[
-				'label' => __( 'General', 'restimo' ),
+				'label' => __( 'General', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -191,19 +191,19 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'overlay_align',
 			[
-				'label' => __( 'Alignment Info', 'restimo' ),
+				'label' => __( 'Alignment Info', 'coffeee' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restimo' ),
+						'title' => __( 'Left', 'coffeee' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restimo' ),
+						'title' => __( 'Center', 'coffeee' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restimo' ),
+						'title' => __( 'Right', 'coffeee' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -226,7 +226,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'radius_thumb',
 			[
-				'label' => __( 'Border Radius Image', 'restimo' ),
+				'label' => __( 'Border Radius Image', 'coffeee' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -237,10 +237,10 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'scale_thumb',
 			[
-				'label' => __( 'Animation Image Hover', 'restimo' ),
+				'label' => __( 'Animation Image Hover', 'coffeee' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'restimo' ),
-				'label_off' => __( 'No', 'restimo' ),
+				'label_on' => __( 'Yes', 'coffeee' ),
+				'label_off' => __( 'No', 'coffeee' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -250,7 +250,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restimo' ),
+				'label' => __( 'Title', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -258,7 +258,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'title_spacing',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'coffeee' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -274,7 +274,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -285,7 +285,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label' => __( 'Hover Color', 'restimo' ),
+				'label' => __( 'Hover Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -305,7 +305,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'heading_overlay',
 			[
-				'label' => __( 'Category', 'restimo' ),
+				'label' => __( 'Category', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -313,10 +313,10 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'show_cat',
 			[
-				'label' => __( 'Show Category', 'restimo' ),
+				'label' => __( 'Show Category', 'coffeee' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'restimo' ),
-				'label_off' => __( 'Hide', 'restimo' ),
+				'label_on' => __( 'Show', 'coffeee' ),
+				'label_off' => __( 'Hide', 'coffeee' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -324,7 +324,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'cat_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -352,7 +352,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'restimo' ),
+				'label' => __( 'Dots', 'coffeee' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -363,7 +363,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'coffeee' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -380,7 +380,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'restimo' ),
+                'label' => __( 'Color', 'coffeee' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -391,7 +391,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'restimo' ),
+                'label' => __( 'Color Active', 'coffeee' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -405,7 +405,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'restimo' ),
+				'label' => __( 'Arrows', 'coffeee' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -415,7 +415,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -426,7 +426,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'restimo' ),
+				'label' => __( 'Color Hover', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -437,7 +437,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'restimo' ),
+				'label' => __( 'Background', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -448,7 +448,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'restimo' ),
+				'label' => __( 'Background Hover', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -459,7 +459,7 @@ class Restimo_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'restimo' ),
+				'label' => __( 'Border Radius', 'coffeee' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -549,5 +549,5 @@ data-mgaps="<?php echo esc_attr( $mgaps ); ?>">
 	  	return $cat;
 	}
 }
-// After the Restimo_Portfolio_Slider class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_Portfolio_Slider() );
+// After the Coffeee_Portfolio_Slider class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Coffeee_Portfolio_Slider() );

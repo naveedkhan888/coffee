@@ -2,7 +2,7 @@
 /**
  * Hooks for importer
  *
- * @package Restimo
+ * @package Coffeee
  */
 
 
@@ -12,7 +12,7 @@
  * @since  1.0
  *
  */
-function restimo_importer() {
+function coffeee_importer() {
 	return array(
 		array(
 			'name'       => 'Coffee 1',
@@ -36,4 +36,4 @@ function restimo_importer() {
 	);
 }
 
-add_filter( 'soo_demo_packages', 'restimo_importer', 30 );
+add_filter( 'soo_demo_packages', 'coffeee_importer', 30 );

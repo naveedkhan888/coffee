@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Counter 2
  */
-class Restimo_Counter2 extends Widget_Base{
+class Coffeee_Counter2 extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_Counter2 extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Counter 2', 'restimo' );
+		return __( 'XP Counter 2', 'coffeee' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restimo_Counter2 extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo' ];
+		return [ 'category_coffeee' ];
 	}
 
 	protected function register_controls() {
@@ -32,25 +32,25 @@ class Restimo_Counter2 extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Counter', 'restimo' ),
+				'label' => __( 'Counter', 'coffeee' ),
 			]
 		);
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'restimo' ),
+				'label' => __( 'Alignment', 'coffeee' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restimo' ),
+						'title' => __( 'Left', 'coffeee' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restimo' ),
+						'title' => __( 'Center', 'coffeee' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restimo' ),
+						'title' => __( 'Right', 'coffeee' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -63,7 +63,7 @@ class Restimo_Counter2 extends Widget_Base{
 		$this->add_control(
 			'icon_font',
 			[
-				'label' => __( 'Icon', 'restimo' ),
+				'label' => __( 'Icon', 'coffeee' ),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -76,9 +76,9 @@ class Restimo_Counter2 extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title:', 'restimo' ),
+				'label' => __( 'Title:', 'coffeee' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Current Clients', 'restimo' ),
+				'default' => __( 'Current Clients', 'coffeee' ),
 			]
 		);
 
@@ -87,23 +87,23 @@ class Restimo_Counter2 extends Widget_Base{
 			[
 				'label' => 'Number:',
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '180', 'restimo' ),
+				'default' => __( '180', 'coffeee' ),
 			]
 		);
 
 		$this->add_control(
 			'after_number',
 			[
-				'label' => __( 'After Number:', 'restimo' ),
+				'label' => __( 'After Number:', 'coffeee' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '', 'restimo' ),
+				'default' => __( '', 'coffeee' ),
 			]
 		);		
 
 		$this->add_control(
 			'time',
 			[
-				'label' => __( 'Duration', 'restimo' ),
+				'label' => __( 'Duration', 'coffeee' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -126,7 +126,7 @@ class Restimo_Counter2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Style', 'restimo' ),
+				'label' => __( 'Style', 'coffeee' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -135,7 +135,7 @@ class Restimo_Counter2 extends Widget_Base{
 		$this->add_control(
 			'heading_icon',
 			[
-				'label' => __( 'Icon', 'restimo' ),
+				'label' => __( 'Icon', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -143,7 +143,7 @@ class Restimo_Counter2 extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_space',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'coffeee' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -159,7 +159,7 @@ class Restimo_Counter2 extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -173,7 +173,7 @@ class Restimo_Counter2 extends Widget_Base{
 		$this->add_control(
 			'heading_number',
 			[
-				'label' => __( 'Number', 'restimo' ),
+				'label' => __( 'Number', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -181,7 +181,7 @@ class Restimo_Counter2 extends Widget_Base{
 		$this->add_control(
 			'number_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -201,7 +201,7 @@ class Restimo_Counter2 extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restimo' ),
+				'label' => __( 'Title', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -209,7 +209,7 @@ class Restimo_Counter2 extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'coffeee' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -225,7 +225,7 @@ class Restimo_Counter2 extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -262,5 +262,5 @@ class Restimo_Counter2 extends Widget_Base{
 		return [ 'number', 'funfact' ];
 	}
 }
-// After the Restimo_Counter class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_Counter2() );
+// After the Coffeee_Counter class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Coffeee_Counter2() );

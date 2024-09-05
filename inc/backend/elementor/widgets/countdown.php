@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Contact Info
  */
-class Restimo_CountDown extends Widget_Base{
+class Coffeee_CountDown extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restimo_CountDown extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP CountDown', 'restimo' );
+		return __( 'XP CountDown', 'coffeee' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restimo_CountDown extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restimo' ];
+		return [ 'category_coffeee' ];
 	}
 
 	protected function register_controls() {
@@ -32,30 +32,30 @@ class Restimo_CountDown extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'CountDown', 'restimo' ),
+				'label' => __( 'CountDown', 'coffeee' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'restimo' ),
+				'label' => __( 'Alignment', 'coffeee' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restimo' ),
+						'title' => __( 'Left', 'coffeee' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restimo' ),
+						'title' => __( 'Center', 'coffeee' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restimo' ),
+						'title' => __( 'Right', 'coffeee' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				// 'prefix_class' => 'restimo%s-align-',
+				// 'prefix_class' => 'coffeee%s-align-',
 				'selectors' => [
 					'{{WRAPPER}}' => 'text-align: {{VALUE}};',
 				],
@@ -67,16 +67,16 @@ class Restimo_CountDown extends Widget_Base{
 			[
 				'label' => 'Date - Time',
 				'type' => Controls_Manager::DATE_TIME,
-				'default' => __( '2025-10-26 12:00', 'restimo' ),
+				'default' => __( '2025-10-26 12:00', 'coffeee' ),
 			]
 		);
 
 		$this->add_control(
 			'zone',
 			[
-				'label' => __( 'UTC Timezone Offset', 'restimo' ),
+				'label' => __( 'UTC Timezone Offset', 'coffeee' ),
 				'type' => Controls_Manager::NUMBER,
-				'default' => __( '0', 'restimo' ),
+				'default' => __( '0', 'coffeee' ),
 			]
 		);
 
@@ -85,39 +85,39 @@ class Restimo_CountDown extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_normal',
 			[
-				'label' => __( 'One', 'restimo' ),
+				'label' => __( 'One', 'coffeee' ),
 			]
 		);
 		$this->add_control(
 			'day',
 			[
-				'label' => __( 'Day', 'restimo' ),
+				'label' => __( 'Day', 'coffeee' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Day', 'restimo' ),
+				'default' => __( 'Day', 'coffeee' ),
 			]
 		);
 		$this->add_control(
 			'hour',
 			[
-				'label' => __( 'Hour', 'restimo' ),
+				'label' => __( 'Hour', 'coffeee' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Hour', 'restimo' ),
+				'default' => __( 'Hour', 'coffeee' ),
 			]
 		);
 		$this->add_control(
 			'min',
 			[
-				'label' => __( 'Minute', 'restimo' ),
+				'label' => __( 'Minute', 'coffeee' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Minute', 'restimo' ),
+				'default' => __( 'Minute', 'coffeee' ),
 			]
 		);
 		$this->add_control(
 			'second',
 			[
-				'label' => __( 'Second', 'restimo' ),
+				'label' => __( 'Second', 'coffeee' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Second', 'restimo' ),
+				'default' => __( 'Second', 'coffeee' ),
 			]
 		);
 
@@ -126,39 +126,39 @@ class Restimo_CountDown extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_active',
 			[
-				'label' => __( 'Multi', 'restimo' ),
+				'label' => __( 'Multi', 'coffeee' ),
 			]
 		);
 		$this->add_control(
 			'days',
 			[
-				'label' => __( 'Days', 'restimo' ),
+				'label' => __( 'Days', 'coffeee' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Days', 'restimo' ),
+				'default' => __( 'Days', 'coffeee' ),
 			]
 		);
 		$this->add_control(
 			'hours',
 			[
-				'label' => __( 'Hours', 'restimo' ),
+				'label' => __( 'Hours', 'coffeee' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Hours', 'restimo' ),
+				'default' => __( 'Hours', 'coffeee' ),
 			]
 		);
 		$this->add_control(
 			'mins',
 			[
-				'label' => __( 'Minutes', 'restimo' ),
+				'label' => __( 'Minutes', 'coffeee' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Minutes', 'restimo' ),
+				'default' => __( 'Minutes', 'coffeee' ),
 			]
 		);
 		$this->add_control(
 			'seconds',
 			[
-				'label' => __( 'Seconds', 'restimo' ),
+				'label' => __( 'Seconds', 'coffeee' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Seconds', 'restimo' ),
+				'default' => __( 'Seconds', 'coffeee' ),
 			]
 		);
 
@@ -171,7 +171,7 @@ class Restimo_CountDown extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Style', 'restimo' ),
+				'label' => __( 'Style', 'coffeee' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -180,7 +180,7 @@ class Restimo_CountDown extends Widget_Base{
 		$this->add_control(
 			'heading_number',
 			[
-				'label' => __( 'Number', 'restimo' ),
+				'label' => __( 'Number', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -188,7 +188,7 @@ class Restimo_CountDown extends Widget_Base{
 		$this->add_control(
 			'number_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -206,7 +206,7 @@ class Restimo_CountDown extends Widget_Base{
 		$this->add_responsive_control(
 			'number_space',
 			[
-				'label' => __( 'Spacing', 'restimo' ),
+				'label' => __( 'Spacing', 'coffeee' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -224,7 +224,7 @@ class Restimo_CountDown extends Widget_Base{
 		$this->add_control(
 			'heading_titles',
 			[
-				'label' => __( 'Texts', 'restimo' ),
+				'label' => __( 'Texts', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -233,7 +233,7 @@ class Restimo_CountDown extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -253,7 +253,7 @@ class Restimo_CountDown extends Widget_Base{
 		$this->add_control(
 			'heading_sepe',
 			[
-				'label' => __( 'Seperator', 'restimo' ),
+				'label' => __( 'Seperator', 'coffeee' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -261,7 +261,7 @@ class Restimo_CountDown extends Widget_Base{
 		$this->add_control(
 			'sepe_color',
 			[
-				'label' => __( 'Color', 'restimo' ),
+				'label' => __( 'Color', 'coffeee' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -295,5 +295,5 @@ class Restimo_CountDown extends Widget_Base{
 	}
 
 }
-// After the Restimo_CountDown class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restimo_CountDown() );
+// After the Coffeee_CountDown class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Coffeee_CountDown() );

@@ -1,13 +1,13 @@
 <?php
 /**
- * Restimo functions and definitions
+ * Coffeee functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Restimo
+ * @package Coffeee
  */
 
-if ( ! function_exists( 'restimo_setup' ) ) :
+if ( ! function_exists( 'coffeee_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'restimo_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function restimo_setup() {
+	function coffeee_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on _s, use a find and replace
-		 * to change 'restimo' to the name of your theme in all the template files.
+		 * to change 'coffeee' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'restimo', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'coffeee', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -43,7 +43,7 @@ if ( ! function_exists( 'restimo_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Primary', 'restimo' ),
+			'primary' => esc_html__( 'Primary', 'coffeee' ),
 		) );
 
 		/*
@@ -73,32 +73,32 @@ if ( ! function_exists( 'restimo_setup' ) ) :
 		) );
 
 		/* Add image sizes */
-		add_image_size( 'restimo-post-thumbnail-grid', 600, 400, array( 'center', 'center' ) );
-		add_image_size( 'restimo-portfolio-thumbnail-grid', 600, 600, array( 'center', 'center' ) );
-		add_image_size( 'restimo-portfolio-thumbnail-grid-wdouble', 1200, 600, array( 'center', 'center' ) );
-		add_image_size( 'restimo-portfolio-thumbnail-grid-whdouble', 1200, 1200, array( 'center', 'center' ) );
+		add_image_size( 'coffeee-post-thumbnail-grid', 600, 400, array( 'center', 'center' ) );
+		add_image_size( 'coffeee-portfolio-thumbnail-grid', 600, 600, array( 'center', 'center' ) );
+		add_image_size( 'coffeee-portfolio-thumbnail-grid-wdouble', 1200, 600, array( 'center', 'center' ) );
+		add_image_size( 'coffeee-portfolio-thumbnail-grid-whdouble', 1200, 1200, array( 'center', 'center' ) );
 
 		/*
 		 * This theme styles the visual editor to resemble the theme style,
 		 * specifically font, colors, and column width.
 	 	 */
-		add_editor_style( array( 'css/editor-style.css', restimo_fonts_url() ) );
+		add_editor_style( array( 'css/editor-style.css', coffeee_fonts_url() ) );
 		
 	}
 endif;
-add_action( 'after_setup_theme', 'restimo_setup' );
+add_action( 'after_setup_theme', 'coffeee_setup' );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function restimo_widgets_init() {
+function coffeee_widgets_init() {
 	/* Register the 'primary' sidebar. */
 	register_sidebar( array(
-		'name'          => esc_html__( 'Primary Sidebar', 'restimo' ),
+		'name'          => esc_html__( 'Primary Sidebar', 'coffeee' ),
 		'id'            => 'primary',
-		'description'   => esc_html__( 'Add widgets here.', 'restimo' ),
+		'description'   => esc_html__( 'Add widgets here.', 'coffeee' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -106,30 +106,30 @@ function restimo_widgets_init() {
 	) );
 	/* Repeat register_sidebar() code for additional sidebars. */
 }
-add_action( 'widgets_init', 'restimo_widgets_init' );
+add_action( 'widgets_init', 'coffeee_widgets_init' );
 
 /**
  * Register custom fonts.
  */
-if ( ! function_exists( 'restimo_fonts_url' ) ) :
+if ( ! function_exists( 'coffeee_fonts_url' ) ) :
 /**
  * Register Google fonts for Blessing.
  *
- * Create your own restimo_fonts_url() function to override in a child theme.
+ * Create your own coffeee_fonts_url() function to override in a child theme.
  *
  * @since Blessing 1.0
  *
  * @return string Google fonts URL for the theme.
  */
-function restimo_fonts_url() {
+function coffeee_fonts_url() {
 	$fonts_url = '';
 	$font_families     = array();
 	$subsets   = 'latin,latin-ext';
 
 	/* translators: If there are characters in your language that are not supported by Roboto Slab, translate this to 'off'. Do not translate into your own language. */
 
-	$body_font = restimo_get_option( 'body_typo', [] );
-	$second_font = restimo_get_option( 'second_font', [] );
+	$body_font = coffeee_get_option( 'body_typo', [] );
+	$second_font = coffeee_get_option( 'second_font', [] );
 
 	if ( !isset( $body_font['font-family'] ) || $body_font['font-family'] == '' ) {
 		$font_families[] = 'Open Sans:300,300i,400,400i,600,600i,700,700i,800,800i';
@@ -152,16 +152,16 @@ endif;
 /**
  * Enqueue scripts and styles.
  */
-function restimo_scripts() {
+function coffeee_scripts() {
 
 	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'restimo-fonts', restimo_fonts_url(), array(), null );
+	wp_enqueue_style( 'coffeee-fonts', coffeee_fonts_url(), array(), null );
 
 	/** All frontend css files **/ 
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '4.0', 'all');
 	
 	/** load fonts icons **/
-    wp_enqueue_style( 'restimo-xpcustomicon', get_template_directory_uri().'/css/xpcustomicon.css');
+    wp_enqueue_style( 'coffeee-xpcustomicon', get_template_directory_uri().'/css/xpcustomicon.css');
 
     /** Owl slider **/
 	wp_enqueue_style( 'owl-slider', get_template_directory_uri().'/css/owl.carousel.min.css');
@@ -170,9 +170,9 @@ function restimo_scripts() {
     wp_enqueue_style( 'lightgallery', get_template_directory_uri().'/css/lightgallery.css');
 
 	/** Theme stylesheet. **/
-	wp_enqueue_style( 'restimo-style', get_stylesheet_uri() );	
+	wp_enqueue_style( 'coffeee-style', get_stylesheet_uri() );	
 
-	if( restimo_get_option('preload') != false ){
+	if( coffeee_get_option('preload') != false ){
 		wp_enqueue_script( 'royal-preloader', get_template_directory_uri()."/js/royal_preloader.min.js", array('jquery'), '20200716', true);
 	}
 
@@ -182,15 +182,15 @@ function restimo_scripts() {
 	wp_enqueue_script( 'owl-slider', get_template_directory_uri() . '/js/owl.carousel.min.js', array( 'jquery' ), '20200716', true );
 	wp_enqueue_script( 'easypiechart', get_template_directory_uri() . '/js/easypiechart.min.js', array( 'jquery' ), '20200716', true );
 	wp_enqueue_script( 'countdown', get_template_directory_uri() . '/js/jquery.countdown.min.js', array( 'jquery' ), '20180910', true );
-    wp_enqueue_script( 'restimo-elementor', get_template_directory_uri() . '/js/elementor.js', array( 'jquery' ), '20200716', true );
-	wp_enqueue_script( 'restimo-elementor-header', get_template_directory_uri() . '/js/elementor-header.js', array('jquery'), '20200716', true );
-	wp_enqueue_script( 'restimo-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '20200716', true );
+    wp_enqueue_script( 'coffeee-elementor', get_template_directory_uri() . '/js/elementor.js', array( 'jquery' ), '20200716', true );
+	wp_enqueue_script( 'coffeee-elementor-header', get_template_directory_uri() . '/js/elementor-header.js', array('jquery'), '20200716', true );
+	wp_enqueue_script( 'coffeee-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '20200716', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'restimo_scripts' );
+add_action( 'wp_enqueue_scripts', 'coffeee_scripts' );
 
 
 
@@ -256,25 +256,25 @@ if ( class_exists( 'woocommerce' ) ) {
 }
 
 
-function restimo_register_block_styles() {
+function coffeee_register_block_styles() {
     // Add custom styles to core paragraph block
     register_block_style('core/paragraph', array(
         'name'  => 'custom-style',
-        'label' => __('Custom Style', 'restimo'),
+        'label' => __('Custom Style', 'coffeee'),
     ));
 }
-add_action('init', 'restimo_register_block_styles');
+add_action('init', 'coffeee_register_block_styles');
 
-function restimo_register_block_patterns() {
+function coffeee_register_block_patterns() {
     register_block_pattern(
-        'restimo/custom-pattern',
+        'coffeee/custom-pattern',
         array(
-            'title'   => __('Custom Pattern', 'restimo'),
-            'content' => '<!-- wp:paragraph --><p>' . __('Hello World!', 'restimo') . '</p><!-- /wp:paragraph -->',
+            'title'   => __('Custom Pattern', 'coffeee'),
+            'content' => '<!-- wp:paragraph --><p>' . __('Hello World!', 'coffeee') . '</p><!-- /wp:paragraph -->',
         )
     );
 }
-add_action('init', 'restimo_register_block_patterns');
+add_action('init', 'coffeee_register_block_patterns');
 
 add_theme_support('wp-block-styles');
 
