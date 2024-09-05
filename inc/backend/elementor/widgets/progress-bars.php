@@ -132,7 +132,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 			[
 				'label' => __( 'Color', 'restimo' ),
 				'type' => Controls_Manager::COLOR,
-				'default' => '#C19977',
+				'default' => '#ecb65c',
 				'condition' => [
 					'bar_style' => 'circle',
 				]
@@ -181,7 +181,7 @@ class Restimo_Progress_Bars extends Widget_Base{
 			[
 				'label' => __( 'Color', 'restimo' ),
 				'type' => Controls_Manager::COLOR,
-				'default' => '#C19977',
+				'default' => '#ecb65c',
 				'selectors' => [
 					'{{WRAPPER}} .progress-bar' => 'background: {{VALUE}};',
 				],

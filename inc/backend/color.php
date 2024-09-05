@@ -6,7 +6,7 @@ if(!function_exists('restimo_color_scheme')){
 	  	$color_scheme = '';
 
 	  	//Heading Color
-	  	if( restimo_get_option('heading_color') != '#131E30' ){
+	  	if( restimo_get_option('heading_color') != '#3a896a' ){
 			$color_scheme = 
 			'
 			/****Heading Color****/
@@ -42,7 +42,7 @@ if(!function_exists('restimo_color_scheme')){
 		}
 
 		//Button Hover and Dark Color
-	  	if( restimo_get_option('btn_hover_dark') != '#131E30' ){
+	  	if( restimo_get_option('btn_hover_dark') != '#3a896a' ){
 			$color_scheme = 
 			'
 			/****Secondary Color****/
@@ -73,7 +73,7 @@ if(!function_exists('restimo_color_scheme')){
 
 
 	  	//Main Color
-	  	if( restimo_get_option('main_color') != '#C19977' ){
+	  	if( restimo_get_option('main_color') != '#ecb65c' ){
 			$color_scheme = 
 			'
 		  	/****Main Color****/
