@@ -325,8 +325,6 @@ endif;
 
 /** Add Contact Methods in the User Profile **/
 
-//add_filter( 'user_contactmethods', 'coffeee_user_contact_methods' );
-
 function coffeee_author_info_box() {
 
     global $post;
@@ -405,7 +403,6 @@ function coffeee_author_info_box() {
     echo '<div class="author-bio" >' . $author_details . '</div>';
 }
 /** Allow HTML in author bio section **/
-//remove_filter('pre_user_description', 'wp_filter_kses');
 
 /** Related Posts **/
 function coffeee_related_posts() {

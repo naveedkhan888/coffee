@@ -263,7 +263,6 @@ add_action('wp_head', 'coffeee_hook_javascript');
  * Render date-time in Copyright
  */
 
-//add_shortcode( 'xpertpoin8_date', 'xpertpoin8_date_func' );
 
 /* Convert hexdec color string to rgb(a) string */
  

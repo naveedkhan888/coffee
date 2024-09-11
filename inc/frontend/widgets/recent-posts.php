@@ -22,8 +22,6 @@ class coffeee_recent_news extends WP_Widget {
 
     	// these are the widget options
 
-    	//$title = apply_filters( 'widget_title', $instance['title'] );
-
         $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? esc_html__( 'Latest News', 'coffeee' ) : $instance['title'], $instance, $this->id_base );
 
     	$date = ! empty( $instance['count'] ) ? '1' : '0';
